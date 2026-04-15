@@ -1,0 +1,30 @@
+# --- Node.js / Build Tools ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# --- Tailwind / CSS ---
+# We ignore the compiled output because it's generated from our input
+# Note: If you don't use Shopify CLI to sync, you might want to commit this.
+# But usually, it's better to build it fresh.
+assets/tailwind-output.css
+
+# --- Shopify ---
+# Ignore the local environment file (contains API keys/store domain)
+.env
+# Ignore the sync state folder
+.shopify/
+# Optional: Ignore system settings if you want to keep them only on the server
+# config/settings_data.json
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Logs ---
+logs
+*.log
