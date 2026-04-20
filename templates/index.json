@@ -9,12 +9,10 @@
  */
 {
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-        "heading": "Best Shoes in Town"
-      }
+    "main": {
+      "type": "main-page",
+      "settings": {}
     }
   },
-  "order": ["header"]
+  "order": ["main"]
 }
