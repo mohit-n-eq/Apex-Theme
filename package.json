@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "^1.10.2",
+    "@shopify/theme-check-node": "^3.25.1",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.9",
     "prettier": "^3.8.3",
@@ -23,7 +24,8 @@
     "format": "prettier --write '**/*.{liquid,json,js,css}'",
     "format:check": "prettier --check '**/*.{liquid,json,js,css}'",
     "tailwind:dev": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --watch",
-    "tailwind:build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --minify"
+    "tailwind:build": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/base.css --minify",
+    "theme:check": "theme-check-node ."
   },
   "repository": {
     "type": "git",
