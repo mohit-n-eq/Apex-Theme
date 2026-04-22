@@ -14,7 +14,9 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "left"
+        "menu": "main-menu",
+        "show_search": true,
+        "header_width": "container"
       }
     }
   },
