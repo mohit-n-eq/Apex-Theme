@@ -1,5 +1,14 @@
-<div class='header__wrapper my-3{% if section.settings.header_width == "full" %} mx-3{% else %} container mx-auto{% endif %}'>
-  <div class='flex items-center justify-between'>
+<div class='header__wrapper header_sticky-{{ section.settings.header_sticky }} border-b-[{{ section.settings.border_width }}px]'>
+  <div class='flex items-center justify-between my-3{% if section.settings.header_width == "full" %} mx-3{% else %} mx-2 lg:container lg:mx-auto{% endif %}'>
+    <div class='header__mobile_nav block lg:hidden'>
+      {% render 'icons',
+        icons: 'icon-hamburger',
+        icon_classes: 'cursor-pointer',
+        icon_height: '22px',
+        icon_width: '22px',
+        icon_color: '#ffffff'
+      %}
+    </div>
     <div
       class='header__logo'
       style='--header-logo-height-mobile:{{ settings.logo_height_mb }}px;--header-logo-height-desktop:{{ settings.logo_height_desk }}px'
@@ -18,7 +27,7 @@
         <h1 class='header__title'>{{ shop.name }}</h1>
       {% endif %}
     </div>
-    <div class='header__nav'>
+    <div class='header__nav hidden lg:block'>
       <nav class='navigation__bar'>
         <ul class='flex gap-3'>
           {% for link in section.settings.menu.links %}
@@ -101,6 +110,35 @@
           "value": "full"
         }
       ]
+    },
+    {
+      "type": "select",
+      "id": "header_sticky",
+      "label": "Sticky header",
+      "options": [
+        {
+          "label": "Always",
+          "value": "always"
+        },
+        {
+          "label": "On scroll up",
+          "value": "on_scroll_up"
+        },
+        {
+          "label": "Never",
+          "value": "never"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border thickness",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1
     }
   ],
   "presets": [
